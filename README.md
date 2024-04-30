@@ -1,0 +1,1 @@
+Implementation of Social Media Platform (Twitter) for CS F213 OBJECT ORIENTED PROG by Cherian Simon, 2021AAPS2695H. Please use gradle version 21 and SDK version of 21 so that unforseen erros do not happen. 
