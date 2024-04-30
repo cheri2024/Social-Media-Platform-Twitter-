@@ -7,7 +7,7 @@ import com.example.testtwitter.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,7 +32,7 @@ public class PostService {
             default:
                 User user = optionalUser.get();
                 // Create the post
-                Post post = new Post(postBody, LocalDateTime.now(), user);
+                Post post = new Post(postBody, LocalDate.now(), user);
                 postRepository.save(post);
                 return "Post created successfully";
 

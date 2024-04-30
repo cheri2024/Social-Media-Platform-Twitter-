@@ -1,7 +1,7 @@
 package com.example.testtwitter.Entity;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class Post {
     private String postBody;
 
     @Column(nullable = false)
-    private LocalDateTime date;
+    private LocalDate date;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
@@ -28,7 +28,7 @@ public class Post {
     public Post() {
     }
     private long userID;
-    public Post(String postBody, LocalDateTime date, User user) {
+    public Post(String postBody, LocalDate date, User user) {
         this.postBody = postBody;
         this.date = date;
         this.user = user;
@@ -45,7 +45,7 @@ public class Post {
     }
 
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
     public String getPostBody() {

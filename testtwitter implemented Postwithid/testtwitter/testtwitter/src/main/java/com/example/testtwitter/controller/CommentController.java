@@ -77,8 +77,8 @@ public class CommentController {
 
 
     @GetMapping("/comment")
-    public ResponseEntity<?> getCommentDetails(@RequestParam Long commentID) {
-        Comment comment = commentService.getCommentDetails(commentID);
+    public ResponseEntity<?> getCommentDetails(@RequestParam Long CommentID) {
+        Comment comment = commentService.getCommentDetails(CommentID);
         if (comment != null) {
             Map<String, Object> commentMap = constructCommentMap(comment);
             return ResponseEntity.ok(commentMap);
