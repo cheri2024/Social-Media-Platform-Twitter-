@@ -80,7 +80,7 @@ public class UserController {
         responsePosts.add(postMap);
     }
 
-    @PostMapping("/login")
+    @PostMapping( "/login")
     public ResponseEntity<String> login(@RequestBody Map<String, String> request) {
         String password = request.get("password");
         String email = request.get("email");
